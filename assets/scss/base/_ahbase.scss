@@ -1,0 +1,249 @@
+.wrap{
+  width:80%;
+  margin:0 auto;
+}
+
+.bt{
+  border-top:1px solid #e0e0e0;
+}
+.bt-dashed{
+  border-top:1px dashed #e0e0e0;
+}
+
+.title{
+  width:100%;
+  text-align:center;
+  &.left{
+    text-align:left;
+  }
+  &.right{
+    text-align:right;
+  }
+}
+
+.block{
+  display: block;
+  padding: 25px 0 50px;
+  &.white{
+    background-color:#fff;
+  }
+  .title{
+    text-align:center;
+    padding:0 0 25px;
+    h2{
+      margin:0;
+      padding:0;
+      font-size:32px;
+      color:$dark_purple;
+    }
+  }
+  .text{
+    text-align:center;
+    p{
+      color:#505050;
+      font-weight:normal;
+    }
+  }
+}
+
+.small-block{
+  display: block;
+  padding: 0;
+  &.white{
+    background-color:#fff;
+  }
+  .title{
+    text-align:center;
+    background:#fafafa;
+    display: block;
+    overflow: hidden;
+    padding:20px 0 20px;
+    h2{
+      margin:0;
+      padding:0;
+      text-transform:capitalize;
+      font-size:22px;
+      color:#909090;
+    }
+  }
+  .text{
+    text-align:center;
+    p{
+      color:#505050;
+      font-weight:normal;
+    }
+  }
+}
+
+.half-block{
+  width:50%;
+}
+
+.qt-block{
+  width:75%;
+}
+
+.qt-block-pair{
+  width:25%;
+}
+
+.third-block{
+  width:33.33%;
+}
+.third-block-pair{
+  width:69.66%;
+}
+
+.small-wrap{
+  width:70%;
+  margin:0 auto;
+}
+.micro-wrap{
+  width:60%;
+  margin:0 auto;
+}
+.left-wrap{
+  width:77%;
+  margin:0 0 0 3%;
+}
+.left-micro-wrap{
+  width:60%;
+  margin:0;
+}
+.gform_wrapper .gform_footer{
+  clear: none !important;
+}
+.cols{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  .col{
+    &.one{
+      width:100%;
+    }
+    &.two{
+      width:50%;
+    }
+    &.three{
+      width:33.3%;
+    }
+    &.four{
+      width:25%;
+    }
+    &.five{
+      width:20%;
+    }
+  }
+}
+
+select{
+  @include appearance(none);
+  border:1px solid #e0e0e0;
+  background:#fff;
+  background-image:url('../images/down-arrow.png');
+  width:100%;
+  padding:10px 0 10px 10px;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position:97% center;
+  background-size:auto 50%;
+
+}
+//Mixins
+
+@mixin laybefore($color, $opacity){
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba($color,$opacity);
+}
+
+//Absolute Center
+@mixin abcenter ($top, $right, $bottom, $left, $margin){
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  margin:$margin;
+}
+
+@mixin flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flexcenterstart {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+@mixin flexrowstart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+@mixin flexrowcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@mixin two_pair($width1, $width2, $flex-direction){
+  .pair_block{
+    display: flex;
+    flex-direction: $flex-direction;
+    width:100%;
+    overflow: hidden;
+    &.first{
+      width:$width1;
+    }
+    &.second{
+      width:$width1;
+    }
+  }
+}
+
+@mixin three_pair($width1, $width2, $width3, $flex-direction){
+  .pair_block{
+    display: flex;
+    flex-direction: $flex-direction;
+    width:100%;
+    overflow: hidden;
+    &.first{
+      width:$width1;
+    }
+    &.second{
+      width:$width1;
+    }
+    &.third{
+      width:$width1;
+    }
+  }
+}
+
+@mixin four_pair($width1, $width2, $width3, $width4, $flex-direction){
+  .pair_block{
+    display: flex;
+    flex-direction: $flex-direction;
+    width:100%;
+    overflow: hidden;
+    &.first{
+      width:$width1;
+    }
+    &.second{
+      width:$width1;
+    }
+    &.third{
+      width:$width1;
+    }
+    &.fourth{
+      width:$width1;
+    }
+  }
+}
